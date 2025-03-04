@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
 
 void main(){
-runApp(MaterialApp(
-  theme: ThemeData(
-    colorSchemeSeed: Colors.green
-  ),
-  home: const HomePage(),
-));
+runApp(const MyApp());
 }
 
-class HomePage extends StatefulWidget{
-  const HomePage({super.key});
+class MyApp extends StatelessWidget{
+  const MyApp({super.key});
   @override
-  State<StatefulWidget> createState() => HomePageState();
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+     home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
 }
 
-class HomePageState extends State<HomePage> {
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+  @override
+  State<StatefulWidget> createState() => _MyAppHomeState();
+}
+
+class _MyAppHomeState extends State<MyHomePage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("App Bar"),
-        elevation: 0,
-      ),
-      body: const Center(
-        child: Text("Bienvenu"),
+      body: Center(
+        child: const Text("Bienvenu Sur Flutter"),
       ),
     );
   }
