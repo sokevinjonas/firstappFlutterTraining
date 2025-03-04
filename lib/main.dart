@@ -20,8 +20,19 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary, //customer la couleur sans la modifier
+        leading: const Icon(Icons.menu),
         title: const Text("App Bar"),
         elevation: 0,
+        actions: [
+          IconButton(
+              onPressed: (){},
+              icon: const Icon(Icons.search)
+          ),
+          IconButton(
+              onPressed: (){},
+              icon: const Icon(Icons.more_vert))
+        ],
       ),
       body: const Center(
         child: Text("Bienvenu"),
