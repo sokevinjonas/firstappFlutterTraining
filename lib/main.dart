@@ -24,9 +24,9 @@ class MyHomePage extends StatefulWidget {
 class _MyAppHomeState extends State<MyHomePage>{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: const Text("Bienvenu Sur Flutter"),
+        child: Text("Bienvenu Sur Flutter"),
       ),
     );
   }
