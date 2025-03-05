@@ -1,3 +1,5 @@
+import 'package:app1/pages/home_page.dart';
+import 'package:app1/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -8,26 +10,14 @@ class MyApp extends StatelessWidget{
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-     home: MyHomePage(),
+    return   MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => const MyHomePage(),
+        '/settings' : (context) => const MySettingPage()
+      },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-  @override
-  State<StatefulWidget> createState() => _MyAppHomeState();
-}
-
-class _MyAppHomeState extends State<MyHomePage>{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: const Text("Bienvenu Sur Flutter"),
-      ),
-    );
-  }
-}
